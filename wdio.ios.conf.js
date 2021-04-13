@@ -126,6 +126,7 @@ exports.config = {
     // The only one supported by default is 'dot'
     // see also: https://webdriver.io/docs/dot-reporter
     reporters: [[teamcity, {
+        screenshotPath:'temp/screenshots',
         captureStandardOutput: false,
         flowId: true,
         message: '[title]/[browser]',
@@ -219,7 +220,9 @@ exports.config = {
      * Function to be executed after a test (in Mocha/Jasmine).
      */
     afterTest: function(test, context, { error, result, duration, passed, retries }) {
-        driver.takeScreenshot();
+        if (!passed) {
+            driver.takeScreenshot();
+        }
     },
 
 
