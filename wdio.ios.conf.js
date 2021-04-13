@@ -129,7 +129,7 @@ exports.config = {
         screenshotPath:'temp/screenshots',
         captureStandardOutput: false,
         flowId: true,
-        message: '[title]',
+        message: '[title]/[browser]',
     }]],
 
 
