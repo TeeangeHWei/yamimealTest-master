@@ -126,7 +126,6 @@ exports.config = {
     // The only one supported by default is 'dot'
     // see also: https://webdriver.io/docs/dot-reporter
     reporters: [[teamcity, {
-        screenshotPath:'temp/screenshots',
         captureStandardOutput: false,
         flowId: true,
         message: '[title]/[browser]',
